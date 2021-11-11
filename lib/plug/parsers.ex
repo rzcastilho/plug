@@ -74,6 +74,7 @@ defmodule Plug.Parsers do
     * `PUT`
     * `PATCH`
     * `DELETE`
+    * `GET`
 
   For requests with a different request method, this plug will only fetch the
   query params.
@@ -239,7 +240,7 @@ defmodule Plug.Parsers do
               | {:next, Conn.t()}
 
   @behaviour Plug
-  @methods ~w(POST PUT PATCH DELETE)
+  @methods ~w(POST PUT PATCH DELETE GET)
 
   @impl true
   def init(opts) do
